@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import RecipeList from "./pages/RecipeList";
+import RecipeDetail from "./pages/RecipeDetail";
 
 function App() {
   const { user, isAuthenticated, logout } = useContext(AuthContext);
@@ -58,7 +59,7 @@ function App() {
             />
             <Route
               path="/recipe/:id"
-              element={<h1>Recepto informacija</h1>}
+              element={<RecipeDetail />}
             />
           </Route>
 
