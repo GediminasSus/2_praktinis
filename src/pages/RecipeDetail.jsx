@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import FavoriteButton from "../components/FavoriteButton";
 
 function RecipeDetail() {
   const { id } = useParams();
@@ -21,7 +22,7 @@ function RecipeDetail() {
       try {
         const response = await fetch(
           `https://dummyjson.com/recipes/${encodeURIComponent(id)}`,
-          { signal: controller.signal }
+          { signal: controller.signal },
         );
 
         if (response.status === 404) {
@@ -45,7 +46,7 @@ function RecipeDetail() {
           setError(
             error instanceof TypeError
               ? "Nepavyko susisiekti su receptų serveriu."
-              : error.message
+              : error.message,
           );
         }
       } finally {
@@ -97,6 +98,10 @@ function RecipeDetail() {
         src={recipe.image}
         alt={recipe.name}
       />
+
+      <FavoriteButton recipe={recipe} />
+
+      <dl className="recipe-meta"></dl>
 
       <dl className="recipe-meta">
         <div>
