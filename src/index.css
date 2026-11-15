@@ -87,3 +87,33 @@ main a {
   background-color: #fee2e2;
   color: #991b1b;
 }
+
+nav {
+  align-items: center;
+}
+
+nav span {
+  color: white;
+}
+
+nav button {
+  padding: 8px 14px;
+  border: 1px solid white;
+  border-radius: 6px;
+  background-color: transparent;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+}
+
+nav button:hover {
+  background-color: #614e48;
+}
+
+.success-message {
+  max-width: 420px;
+  padding: 12px;
+  border-radius: 6px;
+  background-color: #dcfce7;
+  color: #166534;
+}
