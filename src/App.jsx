@@ -5,6 +5,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import RecipeList from "./pages/RecipeList";
 
 function App() {
   const { user, isAuthenticated, logout } = useContext(AuthContext);
@@ -48,8 +49,9 @@ function App() {
           <Route element={<ProtectedRoute />}>
             <Route
               path="/dashboard"
-              element={<h1>Receptų sąrašas</h1>}
-            />
+              element={<RecipeList />} 
+            />  
+            
             <Route
               path="/favorites"
               element={<h1>Mėgstamiausi receptai</h1>}
