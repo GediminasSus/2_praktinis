@@ -1,15 +1,20 @@
 import { useContext } from "react";
 import { Navigate, Outlet } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
+import FavoritesProvider from "../context/FavoritesProvider";
 
 function ProtectedRoute() {
-  const { isAuthenticated } = useContext(AuthContext);
+  const { user, isAuthenticated } = useContext(AuthContext);
 
   if (!isAuthenticated) {
     return <Navigate to="/login" replace />;
   }
 
-  return <Outlet />;
+  return (
+    <FavoritesProvider key={user.id}>
+      <Outlet />
+    </FavoritesProvider>
+  );
 }
 
 export default ProtectedRoute;

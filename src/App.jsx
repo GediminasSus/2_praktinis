@@ -7,6 +7,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import RecipeList from "./pages/RecipeList";
 import RecipeDetail from "./pages/RecipeDetail";
+import Favorites from "./pages/Favorites";
 
 function App() {
   const { user, isAuthenticated, logout } = useContext(AuthContext);
@@ -55,7 +56,7 @@ function App() {
             
             <Route
               path="/favorites"
-              element={<h1>Mėgstamiausi receptai</h1>}
+              element={<Favorites />}
             />
             <Route
               path="/recipe/:id"

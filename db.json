@@ -19,5 +19,22 @@
       "id": 3
     }
   ],
-  "favorites": []
+  "favorites": [
+    {
+      "userId": 3,
+      "recipeId": 1,
+      "name": "Classic Margherita Pizza",
+      "image": "https://cdn.dummyjson.com/recipe-images/1.webp",
+      "cuisine": "Italian",
+      "id": 1
+    },
+    {
+      "userId": 3,
+      "recipeId": 5,
+      "name": "Mango Salsa Chicken",
+      "image": "https://cdn.dummyjson.com/recipe-images/5.webp",
+      "cuisine": "Mexican",
+      "id": 2
+    }
+  ]
 }
